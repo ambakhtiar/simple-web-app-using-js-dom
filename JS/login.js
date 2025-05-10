@@ -8,9 +8,11 @@ document.getElementById('btn-login').
         const pin = document.getElementById('pin').value;
 
         if (phoneNumber === "12" && pin === "12") {
-            console.log("right");
+            // console.log("right");
             window.location.href = './home.html';
         } else {
-            alert("wrong");
+            alert("Invalid Number or PIN");
+            cleanInputId('phone-number');
+            cleanInputId('pin');
         }
     })

@@ -34,7 +34,12 @@ document.getElementById('btn-cash-out').
             alert("Add Amount & PIN.");
         } else if (pin === 12 && cashOut <= balance && cashOut > 0) {
             balance -= cashOut;
-            setById('account-balance', balance);
+            setById('account-balance', balance.toFixed(3));
+
+            //create element and append child
+            addElement('Cash Out', cashOut.toFixed(3), balance.toFixed(3), 'transection-container');
+
+            // after submit, input cell clean
             cleanInputId('out-amount');
             cleanInputId('out-pin');
         } else {

@@ -26,17 +26,21 @@ document.getElementById('btn-add-money').
         e.preventDefault();
         const addMoney = getInputById('input-add-amount');
         const pin = getInputById('input-pin');
-        console.log(addMoney, pin);
+        // console.log(addMoney, pin);
 
         if (isNaN(addMoney) || isNaN(pin)) {
             alert("Add Amount & PIN.");
         } else if (pin === 12 && addMoney > 0) {
             let balance = getTextById('account-balance');
             balance += addMoney;
-            console.log(balance)
+            // console.log(balance)
 
-            setById('account-balance', balance);
+            setById('account-balance', balance.toFixed(3));
 
+            //create element and append child
+            addElement('Add Money', addMoney.toFixed(3), balance.toFixed(3), 'transection-container');
+
+            // after submit, input cell clean
             cleanInputId('input-add-amount');
             cleanInputId('input-pin');
 

@@ -20,9 +20,9 @@
                 <div class="artboard artboard-demo phone-3">
                     <!-- Available Balance  -->
                     <div>
-                        <div class="stats shadow">
+                        <div class="stats shadow mt-8">
                             <div class="stat">
-                                <div id="account-balance" class="stat-value">1000.00</div>
+                                <div class="stat-value"><span id="account-balance">10000.00</span>Tk</div>
                                 <div class="stat-desc text-center">Available Balance</div>
                             </div>
                         </div>
@@ -30,13 +30,14 @@
                     <div class="divider"></div>
 
                     <!-- User Action  -->
-                    <div>
+                    <div class="space-y-4 space-x-4 text-center">
                         <button id="btn-show-add-money" class="btn btn-lg">Add Money</button>
                         <button id="btn-show-cash-out" class="btn btn-lg">Cash out</button>
+                        <button id="btn-show-transection" class="btn btn-lg">Transection History</button>
                     </div>
                     <div class="divider"></div>
                     <!-- Add Money Start  -->
-                    <div id="add-money-from" class="hidden card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div id="add-money-from" class=" card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mb-8">
                         <h2 class="text-2xl font-bold text-center mt-4">Add Money</h2>
                         <form class="card-body">
                             <div class="form-control">
@@ -60,7 +61,8 @@
                     </div>
                     <!-- Add Money End -->
                     <!-- Cash out Start  -->
-                    <div id="cash-out-from" class="hidden card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div id="cash-out-from"
+                        class="hidden card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mb-8">
                         <h2 class="text-2xl font-bold text-center mt-4">Cash Out</h2>
                         <form class="card-body">
                             <div class="form-control">
@@ -83,6 +85,14 @@
                         </form>
                     </div>
                     <!-- cash out End -->
+                    <!-- Transection History Start  -->
+                    <div id="transection-from" class="hidden">
+                        <h2 class="text-2xl mb-4 text-center">Transection History</h2>
+                        <div id="transection-container" class="space-y-2">
+
+                        </div>
+                    </div>
+                    <!-- Transection History End -->
                 </div>
             </div>
         </div>
